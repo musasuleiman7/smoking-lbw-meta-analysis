@@ -29,4 +29,4 @@ The low, non-significant heterogeneity suggests the studies are in relative agre
 
 ### Forest Plot
 
-![Forest Plot of 23 Prospective Studies](forest_plot.jpg)
+![Forest Plot of 23 Prospective Studies](forest_plot.png)
