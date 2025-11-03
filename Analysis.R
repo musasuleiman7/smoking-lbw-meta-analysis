@@ -1,4 +1,5 @@
-# Meta-analysis of 23 studies, generating a summary and forest plot
+# Meta-analysis of smoking & LBW (Di et al. 2022 replication)
+# Uses 'meta' package for REML model and forest plot generation
 library(tidyverse)
 library(meta)
 
