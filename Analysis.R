@@ -1,3 +1,4 @@
+# Meta-analysis of 23 studies, generating a summary and forest plot
 library(tidyverse)
 library(meta)
 
