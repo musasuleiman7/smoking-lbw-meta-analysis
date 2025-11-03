@@ -1,32 +1,40 @@
-# Meta-Analysis: Maternal Smoking and Low Birth Weight
+# Maternal Smoking and Low Birth Weight
 
-A reproducible meta-analysis of the association between maternal smoking during pregnancy and the risk of low birth weight (LBW) in offspring. This project uses data from the prospective cohort studies included in Di et al. (2022).
-
--   **Data:** `meta_data.csv` (n=23 prospective studies)
--   **Code:** `Analysis.R`
--   **Package(s):** R (v4.3.1) with `meta` and `tidyverse`
+This repository contains a small meta-analysis exploring the association between maternal smoking during pregnancy and low birth weight (LBW) in infants.  
+The project was completed using data from the **prospective cohort studies** reported in *Di et al., World Journal of Pediatrics (2022)*.
 
 ---
 
-## 1. Aim
+### Overview
 
-To programmatically calculate the pooled odds ratio (OR) and quantify the heterogeneity for the association between maternal smoking and LBW, based on published epidemiological data.
+The goal was to reproduce the results for the prospective cohort subset (n = 23) from the original publication and to confirm the pooled odds ratio (OR) and heterogeneity estimates.
 
-## 2. Methods
+- **Data file:** `meta_data.csv` – log odds ratios and standard errors for each study  
+- **Script:** `Analysis.R` – runs a random-effects meta-analysis using the `meta` package (REML method)  
+- **Output:** `forest_plot.png` – generated forest plot of all included studies
 
-Data for 23 prospective cohort studies were extracted from Di et al., *World J Pediatr* (2022), Fig. 2. Effect sizes (ORs) and 95% CIs were log-transformed, and their standard errors were calculated.
+---
 
-A random-effects meta-analysis was performed using the `metagen` function from the `meta` package (REML method). All analyses were conducted in R.
+### Summary of Results
 
-## 3. Results
+Running the analysis produces a pooled odds ratio of **1.93 (95% CI: 1.75–2.12)** with low heterogeneity (**I² = 17%, p = 0.23**).  
+This indicates that, across the prospective studies, maternal smoking during pregnancy is associated with higher odds of delivering a low-birth-weight infant.
 
-The analysis of 23 prospective studies showed a statistically significant association between maternal smoking and low birth weight.
+---
 
--   **Pooled Odds Ratio (OR): 1.93 (95% CI: 1.75–2.12)**
--   **Heterogeneity (I²): 17.4% (p = 0.23)**
+### Reproducibility
 
-The low, non-significant heterogeneity suggests the studies are in relative agreement. The pooled result indicates that smoking is associated with a **93% higher odds of LBW in infants of smoking mothers compared with non-smokers.**
+All analyses were carried out in **R (version 4.x)** using the following packages:
+- `meta`
+- `tidyverse`
 
-### Forest Plot
+To reproduce the results:
+1. Place `meta_data.csv` and `Analysis.R` in the same folder.  
+2. Run `Analysis.R` in RStudio or the R console.  
+3. The script will output the summary statistics and save the forest plot in the working directory.
+
+---
+
+This project was created as part of independent work on learning meta-analysis methods and aims to provide a clear, reproducible example of the workflow.
 
 ![Forest Plot of 23 Prospective Studies](forest_plot.png)
