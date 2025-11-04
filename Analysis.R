@@ -1,5 +1,5 @@
-# Meta-analysis of smoking & LBW (Di et al. 2022 replication)
-# Uses 'meta' package for REML model and forest plot generation
+# Meta-analysis of prospective cohort data of smoking & LBW (Di et al. 2022 replication)
+# Uses the 'meta' package for REML model and forest plot generation
 library(tidyverse)
 library(meta)
 
